@@ -1,0 +1,43 @@
+<div class="app-product" (window:resize)="onResize($event)" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="16px">
+    <div fxFlex="1 1 100%">
+        <div class="general">
+            <span class="title">{{ product.name }}</span>
+
+            <span class="buy">
+                    <button mat-flat-button color="primary" (click)="buy()">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                    </button>
+                </span>
+        </div>
+        <div class="rating">
+            <app-rating [productId]="product.id" [rating]="product.ratingCalc"
+                        [voters]="product.numberOfRatings"></app-rating>
+        </div>
+        <div class="price">
+            <span>{{ product.price }} kr</span>
+        </div>
+        <app-main-product-tracks [productId]="product.id"></app-main-product-tracks>
+    </div>
+
+    <div fxFlex="1 1 100%">
+        <div class="app-product-img" *ngIf="product != null">
+            <img *ngIf="product.cover != null" [lazyLoad]="product.cover" width="{{imageWidth}}">
+        </div>
+
+    </div>
+
+
+    <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" preserveAspectRatio="none">
+        <path fill="#aab6fe"
+              d="M640 0L640 640C640 640 640 640 640 640C614.24 598.84 574.22 568.61 527.58 555.09C527.58 555.09 527.58
+                555.09 527.58 555.09C493.34
+                544.88 435.18 621.14 400 620C336.08 617.92 282.82 544.54 223.91 571.82C209.73 578.38 209.73 578.38 223.91
+                571.82C223.91 571.82 180.96 590.58 180.96 590.58C163.33 597.83 185.29 588.8 180.96 590.58C126.7 612.89 64.57
+                603.51 19.32 566.18C15.51 563.03 34.03 578.31 19.32 566.18C7.25 556.21 0.25 541.38 0.24 525.72C0.21 455.63
+                 0.13 280.39 0 0"
+              id="asEN4wowV"></path>
+
+    </svg>
+</div>
+<app-main-product-info [product]="product"></app-main-product-info>
+<app-footer></app-footer>

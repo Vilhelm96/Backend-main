@@ -1,0 +1,22 @@
+<div *ngIf="product != null" class="app-home-deal">
+
+    <div>
+        <div class="app-home-deal-info">
+            <div class="app-home-deal-discount">
+                <app-counter style="color: #b53d00" [value]="product.discount">%<span
+                    style="color: #37474f; font-size: 0.4em"> Discount</span></app-counter>
+            </div>
+            <div>{{product.name}}</div>
+            <div>{{product.artist}}</div>
+            <div>
+                <button mat-flat-button color="primary" (click)="navigate()">
+                    SHOP NOW
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="image">
+        <img [lazyLoad]="product.cover" (onLoad)="afterImageLoaded($event)">
+    </div>
+</div>

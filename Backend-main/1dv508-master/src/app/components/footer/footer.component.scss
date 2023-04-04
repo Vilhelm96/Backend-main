@@ -1,0 +1,45 @@
+.app-footer{
+    width: 100%;
+    position: relative;
+    height: 38em;
+    color: white;
+    display: flex;
+
+    .app-footer-content {
+        position: relative;
+        width: 100%;
+        align-self: center;
+        text-align: center;
+
+
+        display: flex;
+        flex-direction: column;
+
+        .app-footer-title {
+            padding: 56px 32px 32px 32px;
+            font-size: 42px;
+            text-transform: uppercase;
+        }
+
+        .app-footer-info {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 32px 32px 0 32px;
+
+            font-size: 24px;
+
+            div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    padding: 12px;
+                }
+            }
+        }
+    }
+
+}

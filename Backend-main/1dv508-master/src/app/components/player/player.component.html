@@ -1,0 +1,21 @@
+<div class="app-player" [@slideUpAnimation]="getShowState()">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <span class="app-main-product-title">{{ playerService.getTrackName() }}</span>
+            <span class="mat-toolbar-spacer"></span>
+            <button mat-icon-button (click)="volume()">
+                <mat-icon *ngIf="playerService.getVolume() == 0.0">volume_mute</mat-icon>
+                <mat-icon *ngIf="playerService.getVolume() == 1.0">volume_up</mat-icon>
+            </button>
+            <button mat-icon-button (click)="toggle()" >
+                <mat-icon *ngIf="playerService.isPlaying()">pause</mat-icon>
+                <mat-icon *ngIf="!playerService.isPlaying()">play_arrow</mat-icon>
+            </button>
+            <button mat-icon-button (click)="close()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+
+</div>

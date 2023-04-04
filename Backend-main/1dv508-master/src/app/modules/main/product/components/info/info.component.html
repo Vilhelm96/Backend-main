@@ -1,0 +1,63 @@
+<div class="app-product-info-title" style="">
+    <span>Album Information</span>
+</div>
+
+<mat-tab-group mat-stretch-tabs class="app-product-info-extra">
+    <mat-tab label="Description">
+        <div style="padding: 32px">
+            {{ product.description }}
+        </div>
+    </mat-tab>
+    <mat-tab label="Additional Information">
+        <mat-list style="padding: 32px; text-align: center">
+            <mat-list-item>
+                <div fxFlex="1 1 100%" class="info-style">
+                    <strong>Title</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    {{ product.name }}
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div fxFlex="1 1 100%">
+                    <strong>Artist</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    {{ product.artist }}
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div fxFlex="1 1 100%">
+                    <strong>Producer</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    {{ product.producer }}
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div fxFlex="1 1 100%">
+                    <strong>Duration</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    <app-counter [value]="product.durationMIn"> min</app-counter>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div fxFlex="1 1 100%">
+                    <strong>Year</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    {{ product.year }}
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <div fxFlex="1 1 100%">
+                    <strong>Added</strong>
+                </div>
+                <div fxFlex="1 1 100%">
+                    {{ product.createdAt }}
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </mat-tab>
+</mat-tab-group>

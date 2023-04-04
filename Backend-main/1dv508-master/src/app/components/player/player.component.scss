@@ -1,0 +1,17 @@
+.app-player {
+    display: block;
+    position: fixed;
+    width: 50%;
+
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+    bottom: 0;
+
+    height: 4em;
+    background-color: white;
+
+    box-shadow: rgba(0, 0, 0, 0.66) 1px 0px 4px 0px;
+}
